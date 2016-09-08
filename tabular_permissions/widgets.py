@@ -95,7 +95,10 @@ class TabularPermissionsWidget(FilteredSelectMultiple):
 
         if attrs is None:
             attrs = {}
-        attrs['class'] = 'selectfilter'
+        if '1.10' in django_version:
+            attrs['class'] = 'selector-filter'
+        else:
+            attrs['class'] = 'selectfilter'
         if self.is_stacked:
             attrs['class'] += 'stacked'
 
