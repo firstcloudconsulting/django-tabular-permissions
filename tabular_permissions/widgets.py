@@ -99,7 +99,7 @@ class TabularPermissionsWidget(FilteredSelectMultiple):
         if self.is_stacked:
             attrs['class'] += 'stacked'
 
-        output = [super(FilteredSelectMultiple, self).render(name, value, attrs, choices)]
+        output = [super(FilteredSelectMultiple, self).render(name, value, attrs)]
         if reminder_perms:
             output.append('<script type="text/javascript">addEvent(window, "load", function(e) {')
 
